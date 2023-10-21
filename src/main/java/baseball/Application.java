@@ -26,15 +26,10 @@ public class Application {
         System.out.println("숫자 야구 게임을 시작합니다.");
         while(game==1) {
             // 컴퓨터, 사용자 숫자 넣어주기
-
-
             List<Integer> user = new ArrayList<>();
             int strike=0;
             int ball =0;
             int finsh=0;
-
-
-
 
             System.out.print("숫자를 입력해주세요:");
 
@@ -44,6 +39,7 @@ public class Application {
                 user.add(user_num.charAt(i)-'0');
             }
 
+
             // 예외 처리
             if(user.size()<3 || user.size()>3){
                 throw new IllegalArgumentException("숫자 입력 수가 잘못 되었습니다.");
@@ -51,6 +47,7 @@ public class Application {
 
             System.out.println("computer == "+computer);
             System.out.println("user == "+user);
+
 
             //숫자 다 넣었고 -> 이제 컴퓨터 값을 사용자 값이랑 비교해주기
             for(int i=0; i<3 ; i++){
